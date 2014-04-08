@@ -6,6 +6,9 @@
 
     <link href="/lib/bootstrap/css/bootstrap.css" rel="stylesheet">
     <link href="/lib/bootstrap/css/bootstrap-theme.css" rel="stylesheet">
+	
+    <link rel='stylesheet' href='/css/animate.css'/>
+
     <link rel='stylesheet' href='/css/style.css'/>
 
 
@@ -14,18 +17,18 @@
 <body>
 <div ng-controller="NavCtrl" id="nav" class="navbar navbar-inverse navbar-fixed-top">
     <div class="navbar-inner">
-        <div class="container">
+      
             <ul class="nav navbar-nav">
-                <li ng-class="{active: $routeSegment.startsWith('first')}"><a href="#">Home</a></li>
-                <li ng-class="{active: $routeSegment.startsWith('second')}"><a href="#second/overview">Settings</a></li>
+                <li ng-class="{act: $routeSegment.startsWith('first')}"><a href="#">mixtapefor.me</a></li>
+                <li ng-class="{act: $routeSegment.startsWith('second')}"><a href="#second/overview">Settings</a></li>
             </ul>
 
-        </div>
+        
     </div>
 
 </div>
 
-<div class="container">
+<div>
     <div app-view-segment="0" class="anim"></div>
 </div>
 
@@ -52,6 +55,7 @@
 <script src="/lib/route-segment.js"></script>
 <script src="http://d3js.org/d3.v3.min.js"></script>
 <script src="/lib/view-segment.js"></script>
+<script src="/lib/wow.min.js"></script>
 <script src="/js/app.js"></script>
 </body>
 

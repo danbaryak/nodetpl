@@ -20,14 +20,16 @@ app.use(express.json());
 app.use(express.urlencoded());
 app.use(express.methodOverride());
 app.use(app.router);
-app.use(require('less-middleware')({ src: path.join(__dirname, 'public') }));
+app.use(require('less-middleware')(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
 
 // development only
 if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
-
+app.get('/testing', function(req, res) {
+	res.send('This is a test!');
+});
 app.get('/', routes.index);
 app.get('/users', user.list);
 var server = http.createServer(app);
