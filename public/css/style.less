@@ -1,4 +1,4 @@
-//@import "animate.less";
+@import "animate.less";
 @import "./elements.less";
 @import "/lib/font-awesome-4.0.3/less/font-awesome.less";
 
@@ -19,15 +19,28 @@ html {
 	overflow-y: scroll;
 }
 
+
+//	text-shadow: 3px;
+//	-webkit-animation: fontbulger 5s infinite; /* Safari 4+ */
+//	-moz-animation:    fontbulger 5s infinite; /* Fx 5+ */
+//  	-o-animation:      fontbulger 5s infinite; /* Opera 12+ */
+//	animation:         fontbulger 5s infinite; /* IE 10+ */
+//	.bounce;
+//}
+
 h1 {
-	text-shadow: 3px;
-	.transition;
-	.rotation(0deg);
+	color: orange;
+	.animated;
+	.bounceInLeft;
+}
+h1:hover {
+	.animated;
+	.flash;
 }
 
-h1:hover {
-	color: orange;
-	.rotation(360deg);
+p {
+	.animated(1s, both, .8s);
+	.flipInX;
 }
 .from-top {
 	
@@ -65,31 +78,34 @@ h1:hover {
 
 .anim.ng-enter {
 
-	opacity: 0;
-	.translate(20px);
-	.transition(0.5s);
-	transition-delay: 0.2s;
+	.animated;
+	.fadeIn;
+//	.fadeIn;
+//	opacity: 0;
+//	.translate(20px);
+//	.transition(0.5s);
+//	transition-delay: 0.2s;
 	
 }
-
-.anim.ng-enter-active {
-	opacity: 1;
-	.translate(0px);
-}
+//
+//.anim.ng-enter-active {
+//	opacity: 1;
+//	.translate(0px);
+//}
 
 .anim.ng-leave {
 //	.transition(1s);
 //	transition: 0.5s all;
 	
-	opacity: 1;
-	.translate(0px);
-	
-}
+//	opacity: 1;
+//	.translate(0px);
 
-.anim.ng-leave-active {
-	opacity: 0;
-	.translate(-20px);
 }
+//
+//.anim.ng-leave-active {
+//	opacity: 0;
+//	.translate(-20px);
+//}
 
 .navbar-inverse {
 	background-image: none;
@@ -156,4 +172,5 @@ h1:hover {
 	background: black;
 }
 
-
+// Bounce Animations
+// --------------------------------------
